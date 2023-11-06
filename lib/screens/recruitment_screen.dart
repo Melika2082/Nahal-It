@@ -50,7 +50,7 @@ class _RecruitmentScreenState extends State<RecruitmentScreen> {
             padding: const EdgeInsets.all(10.0),
             child: Container(
               width: double.infinity,
-              height: MediaQuery.of(context).size.height * 1.8,
+              height: MediaQuery.of(context).size.height * 2.5,
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topLeft,
