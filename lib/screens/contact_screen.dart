@@ -8,28 +8,18 @@ class ContactUsScreen extends StatelessWidget {
   ContactUsScreen({Key? key}) : super(key: key);
 
   final List<String> urls = [
+    'https://instagram.com/sigma',
     'https://www.youtube.com/sigma',
     'https://telegram.me/hamkarwp',
-    'https://www.facebook.com/sigma',
-    'https://twitter.com/sigma',
-    'https://instagram.com/sigma',
+    'https://www.aparat.com/nahal_it',
   ];
 
   final List<IconData> icons = [
+    FontAwesomeIcons.instagram,
     FontAwesomeIcons.youtube,
     FontAwesomeIcons.telegram,
-    FontAwesomeIcons.facebook,
-    FontAwesomeIcons.twitter,
-    FontAwesomeIcons.instagram,
+    FontAwesomeIcons.video,
   ];
-
-  launchUrl(Uri url) async {
-    if (await canLaunchUrl(Uri.parse(url.toString()))) {
-      await launchUrl(Uri.parse(url.toString()));
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
