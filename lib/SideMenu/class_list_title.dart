@@ -45,3 +45,23 @@ class ListTexts1 {
     required this.texts1,
   });
 }
+
+class Item {
+  final String image;
+  final String title1;
+  final String title2;
+  final String title3;
+  final String description;
+  final String price;
+  final int quantity;
+
+  Item({
+    required this.image,
+    required this.title1,
+    required this.title2,
+    required this.title3,
+    required this.description,
+    required this.price,
+    required this.quantity,
+  });
+}

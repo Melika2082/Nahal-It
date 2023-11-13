@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:side_menu_app/screens/appbar_screen.dart';
+import 'package:side_menu_app/screens/wordpress.dart';
 
 class ProductsScreen extends StatelessWidget {
   const ProductsScreen({super.key});
@@ -11,9 +12,7 @@ class ProductsScreen extends StatelessWidget {
         title: 'محصولات',
       ),
       body: SafeArea(
-        child: Center(
-          child: Text('محصولات'),
-        ),
+        child: WordPressPliginScreen(),
       ),
     );
   }
