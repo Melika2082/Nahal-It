@@ -6,6 +6,12 @@ const greenColor = Color.fromARGB(255, 0, 68, 2);
 const lightGreenColor = Color.fromARGB(255, 60, 158, 22);
 const blackColor = Color.fromARGB(255, 71, 71, 71);
 
+const dropdownButton = TextStyle(
+  color: lightGreenColor,
+  fontFamily: 'Sahel',
+  fontSize: 25,
+);
+
 // فونت منوهای اپ بار
 const listTitle = TextStyle(
   color: Colors.white,

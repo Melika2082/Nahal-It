@@ -12,6 +12,22 @@ class OrdersScreen extends StatefulWidget {
 }
 
 class _OrdersScreenState extends State<OrdersScreen> {
+  String? selectedValu;
+
+  List<String> dropDownItems = [
+    'انتخاب کنید',
+    'طراحی وب سایت اختصاصی',
+    'وب سایت و سئوی سایت',
+    'کسب و کار',
+    'شبکه های اجتماعی',
+    'موشن گرافیک',
+    'گرافیک',
+    'بیزینس پلن پروپوزال',
+    'طراحی اپلیکیشن موبایل',
+    'تدوین فیلم',
+    'تدوین صدا و صداگذاری',
+  ];
+
   List<ListTexts> texts = [
     ListTexts(
       texts:
@@ -100,10 +116,49 @@ class _OrdersScreenState extends State<OrdersScreen> {
                             const SizedBox(
                               height: 20,
                             ),
-                            _buildTextField(
-                              keyboardType: TextInputType.text,
-                              labelText: 'سفارش پروژه',
-                              hintText: 'سفارش پروژه',
+                            Container(
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: lightGreenColor,
+                                  width: 3,
+                                ),
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 15,
+                                ),
+                                child: DropdownButton<String>(
+                                  style: dropdownButton,
+                                  hint: const Text(
+                                    'انتخاب کنید',
+                                    style: TextStyle(
+                                      color: lightGreenColor,
+                                    ),
+                                  ),
+                                  borderRadius: const BorderRadius.all(
+                                    Radius.circular(20),
+                                  ),
+                                  isExpanded: true,
+                                  dropdownColor:
+                                      const Color.fromARGB(255, 197, 255, 182),
+                                  value: selectedValu,
+                                  items: dropDownItems
+                                      .map(
+                                        (String value) =>
+                                            DropdownMenuItem<String>(
+                                          value: value,
+                                          child: Text(value),
+                                        ),
+                                      )
+                                      .toList(),
+                                  onChanged: (newValue) {
+                                    setState(() {
+                                      selectedValu = newValue!;
+                                    });
+                                  },
+                                ),
+                              ),
                             ),
                             const SizedBox(
                               height: 20,
